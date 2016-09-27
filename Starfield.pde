@@ -1,13 +1,12 @@
-//your code here
 void setup()
 {
-	//your code here
+	size(400,400);
 }
 void draw()
 {
-	//your code here
+	background(255);
 }
-class NormalParticle
+class NormalParticle implements Particle
 {
 	double xPos;
 	double yPos;
@@ -19,27 +18,38 @@ class NormalParticle
 		yPos = y;
 		speed = pSpeed;
 		angle = pAngle;
-		pColor = color(((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256)));
+		pColor = color((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
 
 	}
-	void move() {
+	public void move() {
 		xPos = Math.cos(angle) * speed;
 		yPos = Math.sin(angle) * speed;
 	}
-	void show() {
-		fill pColor;
+	public void show() {
+		fill(pColor);
 	}
 }
 interface Particle
 {
-	//your code here
+	public void show();
+	public void move();
 }
-class OddballParticle //uses an interface
+class OddballParticle implements Particle//uses an interface
 {
-	//your code here
+	public void show() {
+
+	}
+	public void move() {
+
+	}
 }
-class JumboParticle //uses inheritance
+class JumboParticle implements Particle //uses inheritance
 {
-	//your code here
+	public void show() {
+
+	}
+	public void move() {
+
+	}
 }
 
