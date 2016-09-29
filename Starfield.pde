@@ -41,18 +41,18 @@ class NormalParticle implements Particle
 			}
 			else {
 				xPos = xPos + Math.cos(angle) * speed;
-				angle = - 1 * angle; 
+				angle = -1 * angle;
 				yPos = yPos + Math.sin(angle) * speed;
 			}
 		}
 		else {
-			angle = -1 * angle;
 			if (yPos < 0 && yPos > 400) {
+				xPos = xPos + Math.cos(angle) * speed;
 				yPos = yPos + Math.sin(angle) * speed;
-				xPos = xPos + Math.cos(angle) * speed;
 			}
-			else {
+			else {				
 				xPos = xPos + Math.cos(angle) * speed;
+				angle = angle + Math.PI;
 				yPos = yPos + Math.sin(angle) * speed;
 			}
 		}
