@@ -8,7 +8,7 @@ void setup()
 		bob[i] = new NormalParticle((int)(Math.random() * 400),(int)(Math.random() * 400),(int)(Math.random() * 5) + 1, (Math.random() * 2 * PI));
 	}
 	bob[0] = new OddballParticle();
-	bob[1] = new JumboParticle();
+	bob[1] = new JumboParticle((int)(Math.random() * 400),(int)(Math.random() * 400),(int)(Math.random() * 5) + 1, (Math.random() * 2 * PI));
 }
 void draw()
 {
